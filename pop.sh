@@ -99,6 +99,8 @@ sleep 1
 sudo add-apt-repository -y universe
 sudo add-apt-repository -y multiverse
 sudo apt-add-repository -ys ppa:system76-dev/stable
+# Add WebP support
+sudo add-apt-repository ppa:helkaluin/webp-pixbuf-loader
 
 
 # Update and upgrade the system
@@ -113,7 +115,7 @@ sudo apt autoremove -y
 echo -e "\n${CY} Installing my favorite packages (+fonts +Steam) ${CN}"
 sleep 1
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections && sudo apt install ttf-mscorefonts-installer -y
-sudo apt install -y wget nautilus-admin gir1.2-gtop-2.0 python3-gpg transmission htop lm-sensors neofetch cpufetch ubuntu-restricted-extras gamemode mpv gnome-tweaks rhythmbox gnome-boxes youtube-dl steam gdebi-core spice-webdavd spice-client-gtk fortune firmware-b43-installer system76-wallpapers
+sudo apt install -y wget nautilus-admin gir1.2-gtop-2.0 python3-gpg transmission htop lm-sensors neofetch cpufetch ubuntu-restricted-extras gamemode mpv gnome-tweaks rhythmbox gnome-boxes youtube-dl steam gdebi-core spice-webdavd spice-client-gtk fortune firmware-b43-installer system76-wallpapers webp-pixbuf-loader
 
 
 # Comment out the line "127.0.1.1	pop-os.localdomain	pop-os" in the /etc/hosts file
