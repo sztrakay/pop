@@ -100,7 +100,7 @@ sudo add-apt-repository -y universe
 sudo add-apt-repository -y multiverse
 sudo apt-add-repository -ys ppa:system76-dev/stable
 # Add WebP support
-sudo add-apt-repository ppa:helkaluin/webp-pixbuf-loader
+sudo add-apt-repository -ys ppa:helkaluin/webp-pixbuf-loader
 
 
 # Update and upgrade the system
