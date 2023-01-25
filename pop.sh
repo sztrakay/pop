@@ -128,7 +128,7 @@ sudo sed -i '/127.0.1.1.*pop-os/ s/^/#/' /etc/hosts
 # Add some useful aliases to .bash_aliases file
 echo -e "\n${CY} Add some useful aliases to .bash_aliases file ${CN}"
 sleep 1
-echo "alias friss='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y'" >> ~/.bash_aliases
+echo "alias friss='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && flatpak uninstall --unused -y && flatpak update -y'" >> ~/.bash_aliases
 echo "alias frissl='sudo apt update -y && sudo apt list --upgradable'" >> ~/.bash_aliases
 echo "alias cls='clear'" >> ~/.bash_aliases
 source ~/.bash_aliases
