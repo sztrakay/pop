@@ -121,8 +121,15 @@ sudo apt install -y wget nautilus-admin gir1.2-gtop-2.0 python3-gpg transmission
 # Comment out the line "127.0.1.1	pop-os.localdomain	pop-os" in the /etc/hosts file
 echo -e "\n${CY} Modifying /etc/hosts file ${CN}"
 sleep 1
-cp /etc/hosts hosts.bak
+sudo cp /etc/hosts /etc/hosts.bak
 sudo sed -i '/127.0.1.1.*pop-os/ s/^/#/' /etc/hosts
+
+
+# Fix bluetooth battery percentage
+echo -e "\n${CY} Modifying /etc/bluetooth/main.conf file ${CN}"
+sudo cp /etc/bluetooth/main.conf /etc/bluetooth/main.conf.bak
+sudo sed -i '2i\Experimental=true' /etc/bluetooth/main.conf
+sudo systemctl restart bluetooth.service
 
 
 # Add some useful aliases to .bash_aliases file
